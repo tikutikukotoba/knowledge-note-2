@@ -1,0 +1,79 @@
+:root {
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 382px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0 auto 0 0;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+}
+
+header li {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+header a {
+  display: block;
+  border-bottom: solid 2px transparent;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: solid 1px #aaaaaa;
+}
+
+footer ul {
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 1rem;
+  margin: 0;
+}
+
+footer li {
+  font-size: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer a {
+  border-bottom: solid 2px transparent;
+}
+
+footer small {
+  display: block;
+  text-align: center;
+}
