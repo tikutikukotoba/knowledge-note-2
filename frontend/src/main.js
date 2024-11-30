@@ -5,6 +5,7 @@ import mustache from 'mustache';
 // 参照: https://ja.vite.dev/guide/assets.html#importing-asset-as-string
 import html from './templates/sample.html?raw';
 import { login } from './pages/login';
+import { register } from './pages/register';
 
 const test = () => document
   .querySelector('#app')
@@ -15,7 +16,7 @@ router(
     { path: '/', fn: test },
     { path: '/users/:id', fn: (id) => console.log(id) },
     { path: '/articles/:id', fn: ({ id, detail, aa }) => console.log(id, detail, aa) },
-    { path: '/register', fn: login },
+    { path: '/register', fn: register },
     { path: '/login', fn: login },
     { path: '/logout', fn: () => { } },
   ],
