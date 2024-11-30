@@ -1,0 +1,88 @@
+openapi: "3.0.3"
+info:
+  title: "Express API with Swagger"
+  description: "API documentation for Express app with Swagger"
+  version: "1.0.0"
+paths:
+  /api/v1/login:
+    post:
+      summary: "ログイン処理"
+      responses:
+        200:
+          description: "ログイン成功時のレスポンス"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "OK"
+                example:
+                  { "message": "OK" }
+                  # message: "OK" # yaml形式な代替表記
+  /api/v1/register:
+    post:
+      summary: "アカウント登録"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - email
+                - username
+                - password
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: "example@example.com"
+                username:
+                  type: string
+                  example: "example"
+                password:
+                  type: string
+                  example: "password"
+      responses:
+        200:
+          description: "登録成功時のレスポンス"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "OK"
+                example:
+                  { "message": "OK" }
+                  # message: "OK" # yaml形式な代替表記
+  /api/v1/users:
+    delete:
+      tags:
+        - development
+      summary: "開発用 ユーザー全削除"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        200:
+          description: "削除成功時のレスポンス"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "OK"
+                example:
+                  { "message": "OK" }
+                  # message: "OK" # yaml形式な代替表記
+tags:
+  - name: development
+    description: 開発用途のAPI群です
