@@ -14,7 +14,13 @@
 
 ## セットアップ
 
-Codespace で当リポジトリを起動し、以下の操作を実行してください。
+まずは当リポジトリをあなたのリポジトリにインポートするところから始めてください。
+
+インポート対象のリポジトリ: https://github.com/kato83/knowledge-note.git
+
+インポート方法の参考: [GitHub Importer でリポジトリをインポートする - GitHub Docs](https://docs.github.com/ja/migrations/importing-source-code/using-github-importer/importing-a-repository-with-github-importer)
+
+インポートしたリポジトリにて Codespace を起動し、以下の操作を実行してください。
 
 ### バックエンド (backend/)
 
