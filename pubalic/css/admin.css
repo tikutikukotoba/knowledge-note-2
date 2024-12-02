@@ -9,14 +9,9 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    text-align: center;
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-input, button, table {
-    font-size: 16px;
 }
 
 table {
@@ -33,16 +28,4 @@ th, td {
 
 th {
     background-color: #f4f4f4;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
 }
