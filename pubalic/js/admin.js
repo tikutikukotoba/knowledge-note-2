@@ -1,19 +1,27 @@
-(async () => {
-    // サーバーから検索データを取得
-    const response = await fetch('/api/data');
-    const data = await response.json();
+window.addEventListener('load', async () => {
+    try {
+        const response = await fetch('/data.json'); // data.json を取得
+        if (!response.ok) {
+            throw new Error('データを取得できませんでした');
+        }
 
-    const tableBody = document.querySelector('#searchData tbody');
-    tableBody.innerHTML = '';
+        const searchData = await response.json();
+        const tableBody = document.querySelector('#searchData tbody');
 
-    // テーブルにデータを追加
-    data.forEach((item) => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${item.query}</td>
-            <td>${item.ip}</td>
-            <td>${item.timestamp}</td>
-        `;
-        tableBody.appendChild(row);
-    });
-})();
+        // テーブルをクリア
+        tableBody.innerHTML = '';
+
+        // データをテーブルに挿入
+        searchData.forEach((entry) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${entry.query}</td>
+                <td>${entry.ip}</td>
+                <td>${entry.timestamp}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    } catch (error) {
+        console.error('データの読み込みに失敗しました:', error);
+    }
+});
