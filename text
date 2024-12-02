@@ -1,5 +1,6 @@
-検索者用: http://localhost:3000/user.html
-監視者用: http://localhost:3000/admin.html
+ログインページ: http://localhost:3000/login.html
+検索者ページ: http://localhost:3000/user.html
+監視者ページ: http://localhost:3000/admin.html
 
 https://tikutikukotoba/api/v1
 https://tikutikukotoba/api/docs
