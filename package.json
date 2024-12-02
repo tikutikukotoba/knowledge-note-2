@@ -1,5 +1,16 @@
 {
   "dependencies": {
-    "express": "^4.21.1"
-  }
+    "express": "^4.21.1",
+    "uuid": "^11.0.3"
+  },
+  "name": "knowledge-note-2",
+  "version": "1.0.0",
+  "description": "技術系ナレッジ共有サイトを参考に設計からJSベースの開発までを実際にやってみよう。",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
 }
